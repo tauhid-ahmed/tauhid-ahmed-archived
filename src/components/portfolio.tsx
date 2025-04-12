@@ -22,14 +22,14 @@ export default function Portfolio() {
 
 function Card() {
   return (
-    <div className="relative p-8 md:px-14 py-10 space-y-4 md:space-y-6">
+    <div className="relative max-w-2xl mx-auto p-12 lg:px-14 lg:py-10 space-y-4 md:space-y-6 ">
       <div className="relative">
         <Image
           height={300}
-          width={600}
-          src="/assets/icons/thumb.png"
+          width={300}
+          src="/assets/projects/issue-tracker.webp"
           alt="card-border"
-          className="size-full object-cover"
+          className="size-full object-cover aspect-video md:max-h-84"
         />
       </div>
       <div className="">
@@ -44,7 +44,7 @@ function Card() {
         width={600}
         src="/assets/icons/card-border.svg"
         alt="card-border"
-        className="absolute inset-0 size-full object-cover"
+        className="absolute inset-0 size-full object-cover pointer-events-none"
       />
     </div>
   );

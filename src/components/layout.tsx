@@ -35,7 +35,7 @@ export function Section({
   return (
     <Component
       className={cn(
-        "py-12 relative overflow-x-hidden",
+        "py-12 relative overflow-hidden",
         {
           "md:py-20": padding === "lg",
         },
