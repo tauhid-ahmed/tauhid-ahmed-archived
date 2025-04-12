@@ -74,11 +74,11 @@ function Card({
   return (
     <figure
       className={cn(
-        "bg-white w-full border-4 p-6 md:px-10 md:py-11 shadow-[8px_8px_0px_rgba(0,0,0,0.4)] space-y-4 max-w-xl mx-auto",
+        "bg-white w-full border-4 p-6 md:px-10 md:py-11 shadow-[8px_8px_0px_rgba(0,0,0,0.4)] space-y-12",
         className
       )}
     >
-      <blockquote className="text-xl lg:text-2xl font-medium text-gray-800">
+      <blockquote className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-800">
         {quote}
       </blockquote>
       <figcaption className="flex items-center space-x-4">
@@ -90,8 +90,10 @@ function Card({
           />
         </div>
         <div className="text-left space-y-1">
-          <div className="text-lg font-semibold text-gray-900">{name}</div>
-          <div className="text-md text-gray-500">
+          <div className="md:text-2xl lg:text-3xl font-semibold text-gray-900">
+            {name}
+          </div>
+          <div className="text-md md:text-xl lg:text-2xl">
             {title} at {company}
           </div>
         </div>
@@ -110,8 +112,8 @@ function SectionHeader() {
         <Image
           src="/assets/icons/new.svg"
           alt="underline"
-          width={40}
-          height={40}
+          width={60}
+          height={60}
         />
       </div>
     </div>

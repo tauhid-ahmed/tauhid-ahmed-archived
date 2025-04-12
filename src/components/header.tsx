@@ -12,16 +12,16 @@ const navLinks = [
 
 export function Header() {
   return (
-    <Section as="header" className="md:border-b-6 relative" padding="lg">
+    <Section as="header" className="md:border-b-6 relative">
       <ImageDecoration
         className="right-0 top-0 translate-x-1/3 -translate-y-1/3 w-20 md:w-38"
-        src="/assets/icons/octopus-pink.svg"
+        src="/assets/icons/octopus-red.svg"
         width={150}
         height={130}
       />
       <ImageDecoration
         className="left-0 bottom-0 -translate-x-2/5 translate-y-1/4 w-20 md:w-32 hidden md:block"
-        src="/assets/icons/octopus-pink.svg"
+        src="/assets/icons/octopus-red.svg"
         width={150}
         height={130}
       />

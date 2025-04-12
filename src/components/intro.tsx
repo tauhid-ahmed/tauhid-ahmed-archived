@@ -7,7 +7,7 @@ export function Intro() {
     <Section padding="lg" className="relative">
       <ImageDecoration
         className="-left-0 -bottom-0  -translate-x-1/2 translate-y-1/2"
-        src="/assets/icons/octopus-pink.svg"
+        src="/assets/icons/octopus-red.svg"
         width={150}
         height={130}
       />
@@ -15,13 +15,13 @@ export function Intro() {
         <div className="flex md:gap-8 flex-col md:justify-between md:items-center md:flex-row">
           <div className="flex-1 text-center md:text-left space-y-4">
             <Image
-              src="/assets/icons/sun-pink.svg"
+              src="/assets/icons/sun-blue.svg"
               width={145}
               height={145}
               alt="Sun Icon Sky Color"
               className="inline-block size-20 md:size-36"
             />
-            <h1 className="text-[42px] lg:text-6xl xl:text-[80px] leading-tight font-semibold">
+            <h1 className="text-[42px] lg:text-6xl xl:text-[80px] leading-tightest font-semibold">
               I develop ✍️ top notch websites
             </h1>
             <div className="relative w-fit mx-auto md:m-0">

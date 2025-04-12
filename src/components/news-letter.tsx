@@ -5,7 +5,7 @@ export default function Newsletter() {
   return (
     <Section padding="lg">
       <Container>
-        <div className="text-center bg-white border-4 px-10 py-20 lg:p-24 shadow-[8px_8px_0px_rgba(0,0,0,0.4)]">
+        <div className="text-center bg-white border-4 px-10 py-20 lg:p-24 shadow-[12px_12px_0px_rgba(0,0,0,0.4)]">
           <h2 className="text-lg md:text-2xl lg:text-5xl font-medium">
             Let&apos;s start designing your project
           </h2>
