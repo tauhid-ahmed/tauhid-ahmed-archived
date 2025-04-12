@@ -1,0 +1,110 @@
+import { cn } from "@/lib/cn";
+import { Container, Section } from "./layout";
+
+export function Testimonial() {
+  return (
+    <Section padding="lg">
+      <Container>
+        <div className="space-y-14 md:space-y-24">
+          <SectionHeader />
+          <div className="grid gap-14 grid-cols-1 md:grid-cols-[1fr_2rem_1fr]">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} {...testimonial} />
+            ))}
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+
+const testimonials = [
+  {
+    quote:
+      "Tauhid brought our interface to life. Clean animations, responsive design, and TypeScript precision — top-tier work.",
+    name: "Elena Moretti",
+    title: "Design Lead",
+    company: "Spotify, Sweden",
+    className:
+      "md:row-start-1 md:col-start-1 md:col-span-2 origin-top-left rotate-3",
+  },
+  {
+    quote:
+      "From Hono to Postgres, Tauhid bridges backend logic and frontend polish effortlessly. Truly full-stack.",
+    name: "Liam Chen",
+    title: "Senior Engineer",
+    company: "Alibaba Cloud, China",
+    className:
+      "md:row-start-1 md:col-start-2 md:col-span-2 md:translate-y-14 origin-bottom-right -rotate-3",
+  },
+  {
+    quote:
+      "What impressed us most was the subtlety of his motion design. Framer Motion felt like part of the brand itself.",
+    name: "Isabelle Dubois",
+    title: "Product Designer",
+    company: "Airbnb, France",
+    className:
+      "row-start-2 md:col-start-1 md:col-span-2 origin-top-left rotate-3",
+  },
+  {
+    quote:
+      "Tauhid’s stack mastery is insane — Drizzle, Prisma, and Next.js all play like a symphony in his hands.",
+    name: "Mateo García",
+    title: "CTO",
+    company: "Rappi, Colombia",
+    className:
+      "md:row-start-2 md:col-start-2 md:col-span-2 md:translate-y-32 origin-bottom-right rotate-3",
+  },
+];
+
+function Card({
+  quote,
+  name,
+  title,
+  company,
+  className,
+}: {
+  quote: string;
+  name: string;
+  title: string;
+  company: string;
+  className?: string;
+}) {
+  return (
+    <figure
+      className={cn(
+        "bg-white w-full border-4 p-6 md:px-10 md:py-11 shadow-[8px_8px_0px_rgba(0,0,0,0.4)] space-y-4 max-w-xl mx-auto",
+        className
+      )}
+    >
+      <blockquote className="text-xl lg:text-2xl font-medium text-gray-800">
+        {quote}
+      </blockquote>
+      <figcaption className="flex items-center space-x-4">
+        <div className="border-2 rounded-full">
+          <img
+            className="w-12 h-12 rounded-full object-cover"
+            src="/assets/icons/sun-blue.svg"
+            alt="Author image"
+          />
+        </div>
+        <div className="text-left space-y-1">
+          <div className="text-lg font-semibold text-gray-900">{name}</div>
+          <div className="text-md text-gray-500">
+            {title} at {company}
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+
+function SectionHeader() {
+  return (
+    <div className="text-2xl flex justify-center items-center md:text-5xl leading-tight font-semibold">
+      <h2 className="relative inline-flex md:justify-center md:items-center">
+        Here&apos;s what my clients are saying about my work
+      </h2>
+    </div>
+  );
+}
