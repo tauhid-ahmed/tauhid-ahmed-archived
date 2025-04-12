@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <Section padding="lg">
       <Container>
-        <div className="space-y-16 sm:translate-x-6">
+        <div className="space-y-16 lg:translate-x-8">
           <SectionHeader />
           <div className="md:grid sm:grid-cols-2 md:grid-cols-3">
             <div className="max-md:border-2 max-md:-mb-1">
