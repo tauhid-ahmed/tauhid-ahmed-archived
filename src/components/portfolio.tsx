@@ -5,7 +5,7 @@ export default function Portfolio() {
   return (
     <Section padding="lg">
       <Container>
-        <div className="space-y-10">
+        <div className="space-y-14">
           <SectionHeader />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -22,7 +22,7 @@ export default function Portfolio() {
 
 function Card() {
   return (
-    <div className="relative max-w-2xl mx-auto p-12 lg:px-14 lg:py-10 space-y-4 md:space-y-6 ">
+    <div className="relative max-w-2xl mx-auto p-12 lg:px-14 lg:py-10 space-y-6 md:space-y-8">
       <div className="relative">
         <Image
           height={300}
@@ -32,11 +32,23 @@ function Card() {
           className="size-full object-cover aspect-video md:max-h-84"
         />
       </div>
-      <div className="">
-        <h3 className="text-xl md:text-3xl font-semibold">Portfolio design</h3>
-        <p className="text-lg font-medium">
-          UI design - User research - webflow develop
-        </p>
+      <div className="flex gap-4">
+        <div className="space-y-4">
+          <h3 className="text-xl md:text-4xl font-semibold">
+            Portfolio design
+          </h3>
+          <p className="md:text-2xl font-medium">
+            UI design - User research - webflow develop
+          </p>
+        </div>
+        <button className="bg-black size-10 shrink-0 flex justify-center items-center shadow-[4px_4px_0px_rgba(0,0,0,0.4)]">
+          <Image
+            src="/assets/icons/arrow.svg"
+            width={24}
+            height={24}
+            alt="arrow-right"
+          />
+        </button>
       </div>
 
       <Image

@@ -12,7 +12,7 @@ export function Container({ size = "default", className, children }: Props) {
   return (
     <div
       className={cn(
-        "mx-auto w-full px-4",
+        "mx-auto w-full px-8",
         {
           "max-w-3xl": size === "sm",
           "max-w-7xl": size === "default",

@@ -1,9 +1,10 @@
+import Image from "next/image";
 import { cn } from "@/lib/cn";
 import { Container, Section } from "./layout";
 
 export function Testimonial() {
   return (
-    <Section padding="lg">
+    <Section padding="lg" className="md:!pb-36">
       <Container>
         <div className="space-y-14 md:space-y-24">
           <SectionHeader />
@@ -101,10 +102,18 @@ function Card({
 
 function SectionHeader() {
   return (
-    <div className="text-2xl flex justify-center items-center md:text-5xl leading-tight font-semibold">
-      <h2 className="relative inline-flex md:justify-center md:items-center">
-        Here&apos;s what my clients are saying about my work
+    <div className="flex items-center gap-4">
+      <h2 className="relative text-2xl md:text-3xl lg:text-5xl leading-tight font-semibold">
+        Here&apos;s what my clients colleagues <br /> are saying about my work
       </h2>
+      <div className="right-auto">
+        <Image
+          src="/assets/icons/new.svg"
+          alt="underline"
+          width={40}
+          height={40}
+        />
+      </div>
     </div>
   );
 }
