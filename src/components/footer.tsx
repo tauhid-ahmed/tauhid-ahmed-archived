@@ -40,7 +40,7 @@ function Logo() {
         height={50}
         className="size-8"
       />
-      <span className="font-bold text-xl md:text-2xl">Tauhid</span>
+      <span className="font-bold text-xl md:text-2xl uppercase">Tauhid</span>
     </Link>
   );
 }

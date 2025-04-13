@@ -40,7 +40,7 @@ export function Header() {
 
 function Logo() {
   return (
-    <Link className="flex gap-4 items-center" href="/">
+    <Link className="flex gap-2 items-center" href="/">
       <Image
         src="/assets/icons/star-rounded.svg"
         alt=""
@@ -48,7 +48,7 @@ function Logo() {
         height={50}
         className="size-8 md:size-12"
       />
-      <span className="font-bold text-2xl md:text-3xl">Tauhid</span>
+      <span className="font-bold text-2xl md:text-3xl uppercase">Tauhid</span>
     </Link>
   );
 }
