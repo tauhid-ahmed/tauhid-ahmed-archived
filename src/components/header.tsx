@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Container, Section } from "./layout";
 import Link from "next/link";
-import { cn } from "@/lib/cn";
 import { ImageDecoration } from "./image-decoration";
 
 const navLinks = [
@@ -26,7 +25,7 @@ export function Header() {
         height={130}
       />
       <Container size="sm">
-        <nav className="border-2 md:border-5 px-3.5 md:px-5 bg-white flex gap-4 justify-between items-center">
+        <nav className="relative border-2 md:border-5 px-3.5 md:px-5 bg-white flex gap-4 justify-between items-center">
           <NavPretty />
           <Logo />
           <NavMenu />
@@ -73,5 +72,12 @@ function MenuToggle() {
 }
 
 function NavPretty() {
-  return <div className="absolute inset-0"></div>;
+  return (
+    <div className="absolute inset-0 shadow-[8px_8px_0px_rgba(0,0,0,0.4)] md:shadow-[12px_12px_0px_rgba(0,0,0,0.4)]">
+      <span className="absolute size-3 md:size-4 border-3 md:border-4 block top-0 left-0 -translate-y-1/2 -translate-x-1/2 bg-white"></span>
+      <span className="absolute size-3 md:size-4 border-3 md:border-4 block top-0 right-0 -translate-y-1/2 translate-x-1/2 bg-white"></span>
+      <span className="absolute size-3 md:size-4 border-3 md:border-4 block bottom-0 left-0 translate-y-1/2 -translate-x-1/2 bg-white"></span>
+      <span className="absolute size-3 md:size-4 border-3 md:border-4 block bottom-0 right-0 translate-y-1/2 translate-x-1/2 bg-white"></span>
+    </div>
+  );
 }
