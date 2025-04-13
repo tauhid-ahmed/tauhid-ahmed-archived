@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container, Section } from "./layout";
 import { ImageDecoration } from "./image-decoration";
+import { UnderlineNotation } from "./animation";
 
 export function Intro() {
   return (
@@ -22,19 +23,36 @@ export function Intro() {
               className="inline-block size-20 md:size-36"
             />
             <h1 className="text-[42px] lg:text-6xl xl:text-[80px] font-semibold">
-              I Develop ✍️ Modern, Scalable Web Applications.
+              I Develop ✍️ Modern, Scalable Web{" "}
+              <UnderlineNotation>Applications</UnderlineNotation>.
             </h1>
-            <div className="relative w-fit mx-auto md:m-0">
-              <button className="font-semibold text-2xl border-6 rounded-full px-14 py-4 bg-sky-200">
-                See Portfolio
-              </button>
-              <Image
-                src="/assets/icons/paw.svg"
-                width={80}
-                height={40}
-                alt="paw icon"
-                className="absolute right-0 bottom-0 translate-x-8 translate-y-8 w-12 h-20"
-              />
+            <div className="inline-flex gap-10 mx-auto md:m-0">
+              <div className="relative">
+                <button className="font-semibold text-lg md:text-2xl border-6 rounded-full px-8 py-4 bg-sky-200">
+                  Portfolio
+                </button>
+                <Image
+                  src="/assets/icons/paw.svg"
+                  width={80}
+                  height={40}
+                  alt="paw icon"
+                  className="absolute right-0 bottom-0 translate-x-8 translate-y-8 w-12 h-20"
+                />
+              </div>
+              <div className="relative">
+                <div className="w-fit mx-auto md:m-0">
+                  <button className="font-semibold text-lg md:text-2xl border-6 rounded-full px-8 py-4">
+                    Resume
+                  </button>
+                  <Image
+                    src="/assets/icons/paw.svg"
+                    width={80}
+                    height={40}
+                    alt="paw icon"
+                    className="absolute right-0 bottom-0 translate-x-8 translate-y-8 w-12 h-20"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
