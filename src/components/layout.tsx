@@ -1,6 +1,7 @@
 import { cn } from "@/lib/cn";
+import React from "react";
 
-type Props = {
+type Props = React.ComponentProps<"div"> & {
   size?: "sm" | "default";
   className?: string;
   children?: React.ReactNode;

@@ -1,11 +1,12 @@
+"use client";
 import Image from "next/image";
-import { Container, Section } from "./layout";
+import { Container } from "./layout";
 import Link from "next/link";
 import { ImageDecoration } from "./image-decoration";
 import { MobileNav } from "./mobile-nav";
 
 export const navLinks = [
-  { name: "About //", href: "/about" },
+  { name: "About //", href: "#about" },
   { name: "Portfolio", href: "#portfolio" },
   { name: "Hire Me", href: "#hire-me" },
 ];

@@ -3,7 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
-import Cursor from "@/components/cursor";
+import { Lenis } from "@/components/lenis";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -24,12 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${spaceGrotesk.variable} antialiased`}>
-        <div className="flex flex-col min-h-screen">
-          <Cursor />
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <Lenis>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </Lenis>
       </body>
     </html>
   );
