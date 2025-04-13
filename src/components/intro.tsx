@@ -14,7 +14,7 @@ export function Intro() {
       />
       <Container>
         <div className="flex md:gap-8 flex-col md:justify-between md:items-center md:flex-row">
-          <div className="flex-1 text-center md:text-left space-y-8">
+          <div className="flex-1 text-center md:text-left space-y-8 order-2 md:order-1">
             <Image
               src="/assets/icons/sun-blue.svg"
               width={145}
@@ -55,7 +55,7 @@ export function Intro() {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex justify-center md:justify-end">
+          <div className="flex-1 flex justify-center md:justify-end order-1 md:order-2">
             <div className="aspect-square w-full relative">
               <Image
                 src="/assets/images/frame.svg"
@@ -79,7 +79,4 @@ export function Intro() {
       </Container>
     </Section>
   );
-}
-{
-  /* */
 }

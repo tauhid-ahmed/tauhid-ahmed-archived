@@ -36,6 +36,7 @@ export function Button({ asChild, className, ...props }: ButtonProps) {
         {},
         className
       )}
+      {...props}
     >
       {props.children}
     </Comp>

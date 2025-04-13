@@ -12,8 +12,9 @@ export default function Footer() {
           <div className="flex-1">
             <Logo />
           </div>
-          <span className="font-medium">
-            {new Date().getFullYear()} &copy; All rights reserved
+          <span className="font-semibold">
+            <span className="md:hidden">&copy;</span> {new Date().getFullYear()}{" "}
+            <span className="hidden md:inline">&copy; All rights reserved</span>
           </span>
           <div className="flex-1 flex justify-end gap-4">
             <Link href="https://www.linkedin.com/in/tauhidxahmed/">
