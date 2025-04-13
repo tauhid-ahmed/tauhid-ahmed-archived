@@ -38,15 +38,30 @@ export function Intro() {
             </div>
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
-            <Image
-              src="/assets/icons/placeholder.png"
-              width={500}
-              height={500}
-              alt="Sun Icon Sky Color"
-            />
+            <div className="aspect-square w-full relative">
+              <Image
+                src="/assets/images/frame.svg"
+                fill
+                alt="Photo Frame"
+                className="z-10"
+              />
+              <div className="p-10 size-full">
+                <div className="size-full relative overflow-hidden">
+                  {/* <Image
+                    src="/assets/images/profile.jpg"
+                    fill
+                    alt="Tauhid Ahmed"
+                    className="object-cover rounded-lg"
+                  /> */}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
     </Section>
   );
+}
+{
+  /* */
 }

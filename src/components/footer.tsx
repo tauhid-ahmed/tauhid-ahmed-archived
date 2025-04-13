@@ -6,7 +6,7 @@ import { IoLogoGithub } from "react-icons/io5";
 
 export default function Footer() {
   return (
-    <Section as="footer">
+    <Section as="footer" className="border-t-4">
       <Container>
         <div className="text-center flex items-center">
           <div className="flex-1">
