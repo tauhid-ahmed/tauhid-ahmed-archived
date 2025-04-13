@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Container, Section } from "./layout";
+import { AnimatedButton } from "./button";
+import Link from "next/link";
 
 const services = [
   {
@@ -84,9 +86,11 @@ export function Card({
         <h3 className="text-2xl lg:text-4xl font-bold">{title}</h3>
         <p className="lg:text-2xl font-medium">{description}</p>
       </div>
-      <div className="text-2xl font-medium lg:text-4xl border-t-4 px-8 md:px-10 lg:px-15 py-6">
-        Learn More
-      </div>
+      <button className="text-2xl text-left font-medium lg:text-4xl border-t-4 px-8 md:px-10 lg:px-15 py-6">
+        <AnimatedButton className="inline-block" asChild>
+          <Link href="/">Learn More</Link>
+        </AnimatedButton>
+      </button>
     </div>
   );
 }

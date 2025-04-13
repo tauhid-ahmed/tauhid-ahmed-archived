@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Container, Section } from "./layout";
+import { Button } from "./button";
+import Link from "next/link";
 
 export default function Portfolio() {
   return (
@@ -40,14 +42,19 @@ function Card() {
             UI design - User research - webflow develop
           </p>
         </div>
-        <button className="bg-black size-10 shrink-0 flex justify-center items-center shadow-[4px_4px_0px_rgba(0,0,0,0.4)]">
-          <Image
-            src="/assets/icons/arrow.svg"
-            width={24}
-            height={24}
-            alt="arrow-right"
-          />
-        </button>
+        <Button
+          asChild
+          className="bg-black size-10 shrink-0 flex justify-center items-center shadow-[4px_4px_0px_rgba(0,0,0,0.4)]"
+        >
+          <Link href="/">
+            <Image
+              src="/assets/icons/arrow.svg"
+              width={24}
+              height={24}
+              alt="arrow-right"
+            />
+          </Link>
+        </Button>
       </div>
 
       <Image
