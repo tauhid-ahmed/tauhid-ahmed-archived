@@ -13,7 +13,7 @@ export function Intro() {
       />
       <Container>
         <div className="flex md:gap-8 flex-col md:justify-between md:items-center md:flex-row">
-          <div className="flex-1 text-center md:text-left space-y-4">
+          <div className="flex-1 text-center md:text-left space-y-8">
             <Image
               src="/assets/icons/sun-blue.svg"
               width={145}
@@ -21,8 +21,8 @@ export function Intro() {
               alt="Sun Icon Sky Color"
               className="inline-block size-20 md:size-36"
             />
-            <h1 className="text-[42px] lg:text-6xl xl:text-[80px] leading-tightest font-semibold">
-              I develop ✍️ top notch websites
+            <h1 className="text-[42px] lg:text-6xl xl:text-[80px] font-semibold">
+              I Develop ✍️ Modern, Scalable Web Applications.
             </h1>
             <div className="relative w-fit mx-auto md:m-0">
               <button className="font-semibold text-2xl border-6 rounded-full px-14 py-4 bg-sky-200">

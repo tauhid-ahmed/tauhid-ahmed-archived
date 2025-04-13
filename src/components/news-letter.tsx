@@ -7,11 +7,11 @@ export default function Newsletter() {
       <Container>
         <div className="text-center bg-white border-4 px-10 py-20 lg:p-24 shadow-[12px_12px_0px_rgba(0,0,0,0.4)]">
           <h2 className="text-lg md:text-2xl lg:text-5xl font-medium">
-            Let&apos;s start designing your project
+            Build a Fast, Scalable, and Beautiful Web Experience
           </h2>
-          <p className="text-sm md:text-xl lg:text-3xl max-w-2xl mx-auto mt-5">
-            Want to see how to transform your brand into a unique style. sent us
-            a message
+          <p className="text-sm md:text-xl lg:text-3xl max-w-2xl mx-auto mt-5 lg:mt-8">
+            From backend to frontend — let&apos;s bring your project to life.
+            Message me to get started.
           </p>
           <div className="relative w-fit mx-auto mt-8 lg:mt-12">
             <button className="font-semibold md:text-xl lg:text-2xl border-4 rounded-full px-6 py-2 bg-sky-200">
