@@ -73,7 +73,7 @@ export function Intro() {
               <div className="p-10 size-full">
                 <div className="size-full relative overflow-hidden">
                   <Image
-                    src="/assets/images/profile.jpg"
+                    src="/assets/images/me.webp"
                     fill
                     alt="Tauhid Ahmed"
                     className="object-cover rounded-lg"
