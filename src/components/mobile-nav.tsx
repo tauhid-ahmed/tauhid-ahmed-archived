@@ -26,7 +26,7 @@ export function MobileNav() {
           >
             {navLinks.map((link) => (
               <li
-                className="py-3.5 md:py-5 border-l-4 relative after:inset-x-0 after:h-6 hover:after:bg-yellow-400 active:after:bg-yellow-400 focus:after:bg-yellow-400 after:absolute after:-z-10 after:bottom-2 after:transition-colors"
+                className="py-3.5 md:py-5 border-l-4 relative after:inset-x-0 after:h-4 after:bg-yellow-400 after:scale-y-0 hover:after:scale-y-100 active:after:scale-y-100 focus:after:scale-y-100 after:absolute after:-z-10 after:bottom-4 after:transition-transform after:origin-bottom"
                 key={link.name}
               >
                 <Link className="text-2xl font-semibold px-4" href={link.href}>

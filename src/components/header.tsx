@@ -47,7 +47,7 @@ function Logo() {
         height={50}
         className="size-8 md:size-12"
       />
-      <span className="font-bold text-2xl md:text-4xl">Tauhid</span>
+      <span className="font-bold text-2xl md:text-3xl">Tauhid</span>
     </Link>
   );
 }
@@ -58,7 +58,7 @@ function DesktopNav() {
       {navLinks.map((link) => (
         <li className="py-3.5 md:py-5 border-l-4" key={link.name}>
           <Link
-            className="text-xl z-10 md:text-2xl font-medium px-4 relative after:inset-x-0 after:h-4 after:bg-transparent hover:after:bg-yellow-400 active:after:bg-yellow-400 focus:after:bg-yellow-400 after:absolute after:-z-10 after:bottom-0 after:transition-colors"
+            className="text-xl z-10 md:text-2xl font-medium px-4 relative after:inset-x-0 after:h-4 after:bg-yellow-400 after:scale-y-0 hover:after:scale-y-100 active:after:scale-y-100 focus:after:scale-y-100 after:absolute after:-z-10 after:bottom-0 after:transition-transform after:origin-bottom"
             href={link.href}
           >
             {link.name}
