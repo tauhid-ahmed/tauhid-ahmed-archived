@@ -30,6 +30,7 @@ export function Section({
   children,
   as,
   padding = "default",
+  ...props
 }: Props) {
   const Component = as || "section";
   return (
@@ -41,6 +42,7 @@ export function Section({
         },
         className
       )}
+      {...props}
     >
       {children}
     </Component>

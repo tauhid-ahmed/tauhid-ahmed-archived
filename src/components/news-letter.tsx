@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Newsletter() {
   return (
-    <Section padding="lg">
+    <Section padding="lg" id="hire-me">
       <Container>
         <div className="text-center bg-white border-4 px-10 py-20 lg:p-24 shadow-[12px_12px_0px_rgba(0,0,0,0.4)]">
           <h2 className="text-lg md:text-2xl lg:text-5xl font-medium">

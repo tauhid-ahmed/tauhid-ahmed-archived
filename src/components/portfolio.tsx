@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Portfolio() {
   return (
-    <Section padding="lg">
+    <Section padding="lg" id="portfolio">
       <Container>
         <div className="space-y-16">
           <SectionHeader />

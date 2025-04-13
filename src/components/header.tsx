@@ -6,8 +6,8 @@ import { MobileNav } from "./mobile-nav";
 
 export const navLinks = [
   { name: "About //", href: "/about" },
-  { name: "Portfolio", href: "/Portfolio" },
-  { name: "Hire Me", href: "/hire-me" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Hire Me", href: "#hire-me" },
 ];
 
 export function Header() {
