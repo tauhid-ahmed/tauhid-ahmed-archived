@@ -5,7 +5,8 @@ import Services from "@/components/services";
 import TechStack from "@/components/tech-stack";
 import { Testimonial } from "@/components/testimonial";
 
-export default function Home() {
+export default async function Home() {
+  await new Promise((resolve) => setTimeout(resolve, 100));
   return (
     <>
       <Intro />
