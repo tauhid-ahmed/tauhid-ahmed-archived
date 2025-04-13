@@ -70,10 +70,6 @@ function DesktopNav() {
   );
 }
 
-function MenuToggle() {
-  return;
-}
-
 function NavPretty() {
   return (
     <div className="absolute inset-0 shadow-[8px_8px_0px_rgba(0,0,0,0.4)] md:shadow-[12px_12px_0px_rgba(0,0,0,0.4)] pointer-events-none">
