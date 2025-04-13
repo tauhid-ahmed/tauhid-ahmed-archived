@@ -56,9 +56,9 @@ function DesktopNav() {
   return (
     <ul className="md:flex gap-4 hidden">
       {navLinks.map((link) => (
-        <li className="py-3.5 md:py-5 border-l-4 relative" key={link.name}>
+        <li className="py-3.5 md:py-5 border-l-4" key={link.name}>
           <Link
-            className="text-xl md:text-2xl font-medium px-4"
+            className="text-xl z-10 md:text-2xl font-medium px-4 relative after:inset-x-0 after:h-4 after:bg-transparent hover:after:bg-yellow-400 active:after:bg-yellow-400 focus:after:bg-yellow-400 after:absolute after:-z-10 after:bottom-0 after:transition-colors"
             href={link.href}
           >
             {link.name}
