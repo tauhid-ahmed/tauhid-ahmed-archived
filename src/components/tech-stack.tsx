@@ -1,5 +1,3 @@
-import { Section } from "./layout";
-
 const technologies = [
   "Next.js",
   "React",
