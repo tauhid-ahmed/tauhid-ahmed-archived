@@ -3,7 +3,6 @@ import * as Dialog from "@radix-ui/react-dialog";
 import React from "react";
 import { Button } from "./button";
 import { CgClose } from "react-icons/cg";
-import { IoCloudDownloadOutline } from "react-icons/io5";
 import Link from "next/link";
 
 // Define the ref type for the Resume component

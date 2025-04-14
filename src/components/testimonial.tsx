@@ -83,10 +83,12 @@ function Card({
       </blockquote>
       <figcaption className="flex items-center space-x-4">
         <div className="border-2 rounded-full">
-          <img
+          <Image
             className="w-12 h-12 rounded-full object-cover"
             src="/assets/icons/sun-blue.svg"
             alt="Author image"
+            width={48}
+            height={48}
           />
         </div>
         <div className="text-left space-y-1">
