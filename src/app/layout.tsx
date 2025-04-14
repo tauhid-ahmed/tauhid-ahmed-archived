@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
 import { Lenis } from "@/components/lenis";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -24,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${spaceGrotesk.variable} antialiased`}>
+        <Analytics />
         <Lenis>
           <div className="flex flex-col min-h-screen">
             <Header />
@@ -31,6 +34,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </Lenis>
+        <SpeedInsights />
       </body>
     </html>
   );
