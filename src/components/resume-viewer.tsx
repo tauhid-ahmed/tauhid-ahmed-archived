@@ -34,22 +34,21 @@ function Resume({}, ref: React.ForwardedRef<ResumeMethods>) {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/80 z-50" />
         <Dialog.Content className="fixed max-w-2xl w-full mx-auto min-h-[80vh] inset-0 z-50 flex flex-col justify-center px-6">
-          <Dialog.Title className="relative text-xl font-bold text-center text-black mt-10 border-4 bg-white py-2 shadow">
+          <Dialog.Title className="relative text-xl font-bold text-center text-black mt-10 border-4 bg-white py-4 shadow">
             <Button asChild>
               <Link
                 href="/assets/resume/tauhid-ahmed-resume.pdf"
                 download="/assets/resume/tauhid-ahmed-resume.pdf"
-                className="uppercase"
+                className="uppercase underline"
               >
-                <span>Resume</span>{" "}
-                <IoCloudDownloadOutline className="size-14" />
+                Download
               </Link>
             </Button>
             <Button
               className="absolute top-2 right-2"
               onClick={() => setOpen(false)}
             >
-              <CgClose size={24} />
+              <CgClose strokeWidth={2} />
             </Button>
           </Dialog.Title>
           <iframe

@@ -8,20 +8,22 @@ export default function Footer() {
   return (
     <Section as="footer" className="border-t-4">
       <Container>
-        <div className="text-center flex items-center">
+        <div className="text-center flex flex-col md:flex-row gap-6 items-center">
           <div className="flex-1">
             <Logo />
           </div>
           <span className="font-semibold">
-            <span className="md:hidden">&copy;</span> {new Date().getFullYear()}{" "}
-            <span className="hidden md:inline">&copy; All rights reserved</span>
+            {new Date().getFullYear()} &copy; All rights reserved
           </span>
-          <div className="flex-1 flex justify-end gap-4">
-            <Link href="https://www.linkedin.com/in/tauhidxahmed/">
-              <CiLinkedin size={20} />
+          <div className="flex-1 flex justify-end gap-6">
+            <Link
+              href="https://www.linkedin.com/in/tauhidxahmed/"
+              target="_blank"
+            >
+              <CiLinkedin className="size-8" />
             </Link>
-            <Link href="https://github.com/tauhid-ahmed">
-              <IoLogoGithub size={20} />
+            <Link href="https://github.com/tauhid-ahmed" target="_blank">
+              <IoLogoGithub className="size-8" />
             </Link>
           </div>
         </div>
@@ -38,9 +40,9 @@ function Logo() {
         alt=""
         width={50}
         height={50}
-        className="size-8"
+        className="size-8 md:size-12"
       />
-      <span className="font-bold text-xl md:text-2xl uppercase">Tauhid</span>
+      <span className="font-bold text-2xl uppercase">Tauhid</span>
     </Link>
   );
 }

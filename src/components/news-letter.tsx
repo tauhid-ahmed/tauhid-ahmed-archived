@@ -5,7 +5,14 @@ export default function Newsletter() {
   return (
     <Section padding="lg" id="hire-me">
       <Container>
-        <div className="text-center bg-white border-4 px-10 py-20 lg:p-24 shadow-[12px_12px_0px_rgba(0,0,0,0.4)]">
+        <div className="relative text-center bg-white border-4 px-10 py-20 lg:p-24 shadow-[12px_12px_0px_rgba(0,0,0,0.4)]">
+          <Image
+            src="/assets/icons/octopus-red.svg"
+            width={140}
+            height={140}
+            alt="cat icon"
+            className="absolute right-20 top-0 -translate-x-1/2 -translate-y-1/2 size-20 lg:size-32"
+          />
           <h2 className="text-lg md:text-2xl lg:text-5xl font-medium">
             Build a Fast, Scalable, and Beautiful Web Experience
           </h2>
