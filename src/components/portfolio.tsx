@@ -10,10 +10,9 @@ export default function Portfolio() {
         <div className="space-y-16">
           <SectionHeader />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {projects.map((project) => (
+              <Card key={project.title} {...project} />
+            ))}
           </div>
         </div>
       </Container>
@@ -21,26 +20,30 @@ export default function Portfolio() {
   );
 }
 
-function Card() {
+function Card({
+  title,
+  image,
+  description,
+}: {
+  title: string;
+  image: string;
+  description: string;
+}) {
   return (
     <div className="relative p-14 space-y-6 md:space-y-8">
       <div className="relative">
         <Image
           height={300}
           width={300}
-          src="/assets/projects/issue-tracker.webp"
-          alt="card-border"
+          src={image}
+          alt={title}
           className="size-full object-cover aspect-video md:max-h-84"
         />
       </div>
       <div className="flex gap-4 justify-between">
         <div className="space-y-4">
-          <h3 className="text-xl md:text-4xl font-semibold">
-            Portfolio design
-          </h3>
-          <p className="md:text-xl lg:text-2xl font-medium">
-            UI design - User research - webflow develop
-          </p>
+          <h3 className="text-xl md:text-4xl font-semibold">{title}</h3>
+          <p className="md:text-xl lg:text-2xl font-medium">{description}</p>
         </div>
         <Button
           asChild
@@ -93,3 +96,29 @@ function SectionHeader() {
     </h2>
   );
 }
+
+const projects = [
+  {
+    title: "Static portfolio",
+    image: "/assets/projects/portfolio.webp",
+    description: "Responsive UI – Animations – Static Next.js build + Motion",
+  },
+  {
+    title: "Issue tracker",
+    image: "/assets/projects/issue-tracker.webp",
+    description:
+      "Fullstack CRUD – Optimistic UI – Next.js App Router + Drizzle ORM",
+  },
+  {
+    title: "E-commerce",
+    image: "/assets/projects/ecommerce.webp",
+    description:
+      "Product listings – Search & filter UI – React + TypeScript + Motion",
+  },
+  {
+    title: "Auth System",
+    image: "/assets/projects/auth.webp",
+    description:
+      "Auth.js – JWT login – Drizzle ORM + NeonDB – Zod validation + Secure cookies",
+  },
+];
