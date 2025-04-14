@@ -23,38 +23,42 @@ const testimonials = [
   {
     quote:
       "Tauhid brought our interface to life. Clean animations, responsive design, and TypeScript precision — top-tier work.",
-    name: "Elena Moretti",
+    name: "Aria Bennett",
     title: "Design Lead",
-    company: "Spotify, Sweden",
+    company: "Lunaria Studio, Arcadia",
     className:
       "md:row-start-1 md:col-start-1 md:col-span-2 origin-top-left rotate-3",
+    image: "/assets/clients/man-1.webp",
   },
   {
     quote:
       "From Hono to Postgres, Tauhid bridges backend logic and frontend polish effortlessly. Truly full-stack.",
-    name: "Liam Chen",
+    name: "Kenji Takahashi",
     title: "Senior Engineer",
-    company: "Alibaba Cloud, China",
+    company: "NimbusForge, NeoTokyo",
     className:
       "md:row-start-1 md:col-start-2 md:col-span-2 md:translate-y-14 origin-bottom-right -rotate-3",
+    image: "/assets/clients/woman-2.webp",
   },
   {
     quote:
       "What impressed us most was the subtlety of his motion design. Framer Motion felt like part of the brand itself.",
-    name: "Isabelle Dubois",
+    name: "Mira Solène",
     title: "Product Designer",
-    company: "Airbnb, France",
+    company: "Velora, Nouvelle Lune",
     className:
       "row-start-2 md:col-start-1 md:col-span-2 origin-top-left rotate-3",
+    image: "/assets/clients/woman-1.webp",
   },
   {
     quote:
       "Tauhid’s stack mastery is insane — Drizzle, Prisma, and Next.js all play like a symphony in his hands.",
-    name: "Mateo García",
+    name: "Diego Marquez",
     title: "CTO",
-    company: "Rappi, Colombia",
+    company: "Aether Systems, Solaria",
     className:
       "md:row-start-2 md:col-start-2 md:col-span-2 md:translate-y-32 origin-bottom-right rotate-3",
+    image: "/assets/clients/man-2.webp",
   },
 ];
 
@@ -64,12 +68,14 @@ function Card({
   title,
   company,
   className,
+  image,
 }: {
   quote: string;
   name: string;
   title: string;
   company: string;
   className?: string;
+  image: string;
 }) {
   return (
     <figure
@@ -82,13 +88,13 @@ function Card({
         {quote}
       </blockquote>
       <figcaption className="flex items-center space-x-4">
-        <div className="border-2 rounded-full">
+        <div className="border-2 rounded-full shrink-0">
           <Image
-            className="w-12 h-12 rounded-full object-cover"
-            src="/assets/icons/sun-blue.svg"
-            alt="Author image"
-            width={48}
-            height={48}
+            className="w-14 h-14 rounded-full object-cover"
+            src={image}
+            alt={name}
+            width={56}
+            height={56}
           />
         </div>
         <div className="text-left space-y-1">
