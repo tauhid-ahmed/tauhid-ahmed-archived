@@ -1,18 +1,46 @@
 import { Section } from "./layout";
 
+const technologies = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Framer Motion",
+  "Zod",
+  "Node.js",
+  "Express",
+  "Hono",
+  "tRPC",
+  "Drizzle ORM",
+  "Prisma",
+  "PostgreSQL",
+  "JWT",
+  "REST API",
+  "MVC Architecture",
+  "Responsive Design",
+  "Git & GitHub",
+  "Vercel",
+  "CI/CD",
+];
+
 export default function TechStack() {
   return (
-    <Section className="bg-black p-10 text-white z-10">
-      {["Next.js", "Tailwind", "TypeScript", "React", "Node.js", "Express"].map(
-        (tech) => (
+    <section className="bg-black text-white py-10 overflow-hidden relative">
+      <div className="flex whitespace-nowrap w-max animate-marquee">
+        {technologies.map((tech, i) => (
+          <span key={i} className="text-xl md:text-4xl font-semibold mx-5">
+            {tech}
+          </span>
+        ))}
+        {technologies.map((tech, i) => (
           <span
-            key={tech}
-            className="text-xl md:text-5xl font-medium px-4 lg:px-10"
+            key={`dup-${i}`}
+            className="text-xl md:text-4xl font-semibold mx-5"
           >
             {tech}
           </span>
-        )
-      )}
-    </Section>
+        ))}
+      </div>
+    </section>
   );
 }

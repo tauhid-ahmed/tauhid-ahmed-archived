@@ -13,9 +13,18 @@ body {
   font-family: var(--font-primary);
   overflow-x: hidden;
 }
-.no-aspect-ratio {
-  aspect-ratio: auto !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: fill !important; /* force stretching */
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 60s linear infinite;
+  transform: translateZ(0);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
