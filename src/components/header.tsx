@@ -1,9 +1,9 @@
-"use client";
 import Image from "next/image";
 import { Container } from "./layout";
 import Link from "next/link";
 import { ImageDecoration } from "./image-decoration";
 import { MobileNav } from "./mobile-nav";
+import HeaderAnimation from "./header-animation";
 
 export const navLinks = [
   { name: "About //", href: "#about" },
@@ -13,7 +13,7 @@ export const navLinks = [
 
 export function Header() {
   return (
-    <header className="md:border-b-6 relative z-40 py-12">
+    <header className="md:border-b-6 z-40 py-12">
       <ImageDecoration
         className="right-0 top-0 translate-x-1/3 -translate-y-1/3 w-20 md:w-38"
         src="/assets/icons/octopus-red.svg"
@@ -27,12 +27,14 @@ export function Header() {
         height={130}
       />
       <Container size="sm">
-        <nav className="relative border-2 md:border-5 px-3.5 md:px-5 bg-white flex gap-4 justify-between items-center">
-          <NavPretty />
-          <Logo />
-          <DesktopNav />
-          <MobileNav />
-        </nav>
+        <HeaderAnimation>
+          <nav className="relative border-2 md:border-5 px-3.5 md:px-5 bg-white flex gap-4 justify-between items-center">
+            <NavPretty />
+            <Logo />
+            <DesktopNav />
+            <MobileNav />
+          </nav>
+        </HeaderAnimation>
       </Container>
     </header>
   );
