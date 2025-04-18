@@ -34,7 +34,6 @@ export default function HeaderAnimation({
         position: initial ? "relative" : "fixed",
         y: hidden ? "-200%" : "0",
       }}
-      // className="top-0"
       transition={{ duration: 0.2, ease: "linear" }}
     >
       {children}
