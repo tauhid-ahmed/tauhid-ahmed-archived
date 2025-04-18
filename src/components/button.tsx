@@ -32,7 +32,7 @@ export function Button({ asChild, className, ...props }: ButtonProps) {
   return (
     <Comp
       className={cn(
-        "inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer hover:scale-105 transition-transform duration-100",
+        "inline-flex relative overflow-hidden items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 cursor-pointer hover:scale-105 transition-transform duration-100",
         {},
         className
       )}

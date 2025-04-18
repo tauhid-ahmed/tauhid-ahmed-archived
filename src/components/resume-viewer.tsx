@@ -26,7 +26,8 @@ function Resume({}, ref: React.ForwardedRef<ResumeMethods>) {
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
-        <Button className="font-semibold text-lg md:text-2xl border-6 rounded-full px-8 py-4">
+        <Button className="font-semibold text-lg md:text-2xl border-6 rounded-full px-8 py-4 group">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-yellow-300 -z-10 bg-size-[auto_300%] group-hover:bg-bottom group-active:bg-bottom transition-bg" />
           Resume
         </Button>
       </Dialog.Trigger>

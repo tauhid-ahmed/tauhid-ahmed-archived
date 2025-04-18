@@ -33,15 +33,6 @@ export function Intro() {
               I Build Modern, Scalable Web{" "}
               <UnderlineNotation>Applications</UnderlineNotation>.
             </h1>
-            {/* <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-              I&apos;m a passionate web developer focused on building fast,
-              reliable, and user-centric applications. With a strong foundation
-              in modern technologies like React, Next.js, and TypeScript, I
-              specialize in crafting solutions that are both visually compelling
-              and performance-optimized. I care deeply about clean architecture,
-              scalable code, and seamless user experiences—from landing pages to
-              full-stack platforms.
-            </p> */}
 
             <div className="inline-flex gap-6 mx-auto md:m-0">
               <ResumeViewer />
