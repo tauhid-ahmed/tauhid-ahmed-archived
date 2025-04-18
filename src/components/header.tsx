@@ -26,16 +26,16 @@ export function Header() {
         width={150}
         height={130}
       />
-      <Container size="sm">
-        <HeaderAnimation>
+      <HeaderAnimation>
+        <Container size="sm">
           <nav className="relative border-2 md:border-5 px-3.5 md:px-5 bg-white flex gap-4 justify-between items-center">
             <NavPretty />
             <Logo />
             <DesktopNav />
             <MobileNav />
           </nav>
-        </HeaderAnimation>
-      </Container>
+        </Container>
+      </HeaderAnimation>
     </header>
   );
 }

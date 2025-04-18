@@ -35,6 +35,7 @@ export default function HeaderAnimation({
         y: hidden ? "-200%" : "0",
       }}
       transition={{ duration: 0.2, ease: "linear" }}
+      className="inset-x-0"
     >
       {children}
     </motion.div>
