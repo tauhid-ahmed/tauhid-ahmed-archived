@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import Footer from "@/components/footer";
 import { Lenis } from "@/components/lenis";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const spaceGrotesk = Space_Grotesk({
@@ -25,6 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-9Q3P6PP0LB" />
       <body className={`${spaceGrotesk.variable} antialiased`}>
         <Analytics />
         <Lenis>
