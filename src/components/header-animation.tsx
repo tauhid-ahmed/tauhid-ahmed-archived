@@ -8,21 +8,20 @@ export default function HeaderAnimation({
   children: React.ReactNode;
 }) {
   const [hidden, setHidden] = useState(false);
+  const [initial, setInitial] = useState(true);
   const { scrollY } = useScroll();
   const ref = useRef<HTMLDivElement>(null);
+  const previousRef = useRef<number>(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0;
+    const delta = latest - previousRef.current;
 
-    // Only hide when scrolling down and show when scrolling up
-    if (ref.current) {
-      if (latest > 50) {
-        setHidden(latest > previous);
-        ref.current.style.position = "fixed";
-      } else {
-        setHidden(false); // Always show header at the top of the page
-        ref.current.style.position = "relative";
-      }
+    if (latest <= 100) setInitial(true);
+    else setInitial(false);
+
+    if (Math.abs(delta) > 50) {
+      setHidden(delta > 0);
+      previousRef.current = latest;
     }
   });
 
@@ -30,7 +29,12 @@ export default function HeaderAnimation({
     <motion.div
       ref={ref}
       initial={false}
-      animate={{ y: hidden ? "-200%" : 0 }}
+      layout
+      animate={{
+        position: initial ? "relative" : "fixed",
+        y: hidden ? "-200%" : "0",
+      }}
+      // className="top-0"
       transition={{ duration: 0.2, ease: "linear" }}
     >
       {children}
