@@ -1,5 +1,6 @@
 "use client";
 
+import AboutMe from "@/components/about-me";
 import { Intro } from "@/components/intro";
 import Newsletter from "@/components/news-letter";
 import Portfolio from "@/components/portfolio";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <Intro />
+      <AboutMe />
       <TechStack />
       <Services />
       <Portfolio />

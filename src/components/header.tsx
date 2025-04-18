@@ -13,7 +13,7 @@ export const navLinks = [
 
 export function Header() {
   return (
-    <header className="md:border-b-6 z-40 py-12 relative">
+    <header className="md:border-b-6 z-40 py-12 relative md:min-h-[184px]">
       <ImageDecoration
         className="right-0 top-0 translate-x-1/3 -translate-y-1/3 w-20 md:w-38"
         src="/assets/icons/octopus-red.svg"
