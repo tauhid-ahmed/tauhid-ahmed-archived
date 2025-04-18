@@ -26,48 +26,60 @@ function Card({
   description,
 }: {
   title: string;
-  image: string;
+  image: string[];
   description: string;
 }) {
   return (
-    <div className="relative p-14 space-y-6 md:space-y-8">
-      <div className="relative">
+    <>
+      <div className="relative p-14 space-y-6 md:space-y-8">
+        <div className="space-y-2 aspect-video md:max-h-84 relative overflow-hidden">
+          {image.map((image, index) => (
+            <div
+              className="size-full absolute animate-project"
+              key={index}
+              style={{
+                top: `${index * 100}%`,
+              }}
+            >
+              <Image
+                height={300}
+                width={300}
+                src={image}
+                alt={"title"}
+                className="size-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="flex gap-4 justify-between">
+          <div className="space-y-4">
+            <h3 className="text-xl md:text-4xl font-semibold">{title}</h3>
+            <p className="md:text-xl lg:text-2xl font-medium">{description}</p>
+          </div>
+          <Button
+            asChild
+            className="bg-black size-10 shrink-0 flex justify-center items-center shadow-[4px_4px_0px_rgba(0,0,0,0.4)]"
+          >
+            <Link href="/">
+              <Image
+                src="/assets/icons/arrow.svg"
+                width={24}
+                height={24}
+                alt="arrow-right"
+              />
+            </Link>
+          </Button>
+        </div>
+
         <Image
           height={300}
-          width={300}
-          src={image}
-          alt={title}
-          className="size-full object-cover aspect-video md:max-h-84"
+          width={600}
+          src="/assets/icons/card-border.svg"
+          alt="card-border"
+          className="absolute inset-0 size-full object-cover pointer-events-none"
         />
       </div>
-      <div className="flex gap-4 justify-between">
-        <div className="space-y-4">
-          <h3 className="text-xl md:text-4xl font-semibold">{title}</h3>
-          <p className="md:text-xl lg:text-2xl font-medium">{description}</p>
-        </div>
-        <Button
-          asChild
-          className="bg-black size-10 shrink-0 flex justify-center items-center shadow-[4px_4px_0px_rgba(0,0,0,0.4)]"
-        >
-          <Link href="/">
-            <Image
-              src="/assets/icons/arrow.svg"
-              width={24}
-              height={24}
-              alt="arrow-right"
-            />
-          </Link>
-        </Button>
-      </div>
-
-      <Image
-        height={300}
-        width={600}
-        src="/assets/icons/card-border.svg"
-        alt="card-border"
-        className="absolute inset-0 size-full object-cover pointer-events-none"
-      />
-    </div>
+    </>
   );
 }
 
@@ -99,26 +111,42 @@ function SectionHeader() {
 
 const projects = [
   {
+    title: "Centurion",
+    image: [
+      "/assets/projects/centurion/centurion-1.webp",
+      "/assets/projects/centurion/centurion-2.webp",
+      "/assets/projects/centurion/centurion-3.webp",
+    ],
+    description:
+      "Product listings – Search & filter UI – React + TypeScript + Motion",
+  },
+  {
     title: "Static portfolio",
-    image: "/assets/projects/portfolio.webp",
+    image: [
+      "/assets/projects/portfolio.webp",
+      "/assets/projects/portfolio.webp",
+      "/assets/projects/portfolio.webp",
+    ],
     description: "Responsive UI – Animations – Static Next.js build + Motion",
   },
   {
     title: "Issue tracker",
-    image: "/assets/projects/issue-tracker.webp",
+    image: [
+      "/assets/projects/issue-tracker.webp",
+      "/assets/projects/issue-tracker.webp",
+      "/assets/projects/issue-tracker.webp",
+    ],
     description:
       "Fullstack CRUD – Optimistic UI – Next.js App Router + Drizzle ORM",
   },
   {
     title: "E-commerce",
-    image: "/assets/projects/ecommerce.webp",
+    image: [
+      "/assets/projects/ecommerce.webp",
+      "/assets/projects/ecommerce.webp",
+      "/assets/projects/ecommerce.webp",
+    ],
     description:
       "Product listings – Search & filter UI – React + TypeScript + Motion",
-  },
-  {
-    title: "Auth System",
-    image: "/assets/projects/auth.webp",
-    description:
-      "Auth.js – JWT login – Drizzle ORM + NeonDB – Zod validation + Secure cookies",
   },
 ];

@@ -28,3 +28,25 @@ body {
     transform: translateX(-50%);
   }
 }
+
+@keyframes scroll-slow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-project {
+  animation: animate-project 20s linear infinite;
+}
+
+@keyframes animate-project {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}
