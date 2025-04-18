@@ -7,6 +7,7 @@ import { Lenis } from "@/components/lenis";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Particles } from "@/components/particle";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       <GoogleAnalytics gaId="G-9Q3P6PP0LB" />
       <body className={`${spaceGrotesk.variable} antialiased`}>
         <Analytics />
+        <Particles />
         <Lenis>
           <div className="flex flex-col min-h-screen">
             <Header />
