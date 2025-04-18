@@ -94,7 +94,7 @@ function Letter({
   const o = useTransform(opacity, [start, end], [0, 1]);
   return (
     <span className="relative">
-      <span className="absolute opacity-20 pointer-events-none">
+      <span className="absolute opacity-20 pointer-events-none select-none">
         {children}
       </span>
       <motion.span
