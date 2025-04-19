@@ -46,7 +46,7 @@ export function Particles() {
             height: `${Math.random() * 6}px`,
             left: `${Math.random() * dimensions.width + 1}px`,
             top: `${Math.random() * dimensions.height + 1}px`,
-            backgroundColor: "orange",
+            backgroundColor: "#bada55",
             mixBlendMode: "darken",
           }}
           animate={{

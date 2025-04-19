@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container, Section } from "./layout";
 import { Button } from "./button";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function Portfolio() {
   return (
@@ -22,23 +23,31 @@ export default function Portfolio() {
 
 function Card({
   title,
-  image,
+  images,
   description,
 }: {
   title: string;
-  image: string[];
+  images: string[];
   description: string;
 }) {
   return (
     <>
       <div className="relative p-14 space-y-6 md:space-y-8">
         <div className="space-y-2 aspect-video md:max-h-84 relative overflow-hidden">
-          {image.map((image, index) => (
-            <div
-              className="size-full absolute animate-project"
+          {[...images, images[0]].map((image, index) => (
+            <motion.div
+              className="size-full absolute"
               key={index}
               style={{
                 top: `${index * 100}%`,
+              }}
+              animate={{
+                y: `${images.length * -100}%`,
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "linear",
               }}
             >
               <Image
@@ -48,7 +57,7 @@ function Card({
                 alt={"title"}
                 className="size-full object-cover"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
         <div className="flex gap-4 justify-between">
@@ -112,41 +121,33 @@ function SectionHeader() {
 const projects = [
   {
     title: "Centurion",
-    image: [
+    images: [
       "/assets/projects/centurion/centurion-1.webp",
       "/assets/projects/centurion/centurion-2.webp",
       "/assets/projects/centurion/centurion-3.webp",
     ],
     description:
       "Product listings – Search & filter UI – React + TypeScript + Motion",
+    href: "/",
   },
   {
     title: "Static portfolio",
-    image: [
-      "/assets/projects/portfolio.webp",
-      "/assets/projects/portfolio.webp",
-      "/assets/projects/portfolio.webp",
-    ],
+    images: ["/assets/projects/portfolio.webp"],
     description: "Responsive UI – Animations – Static Next.js build + Motion",
+    href: "/",
   },
   {
     title: "Issue tracker",
-    image: [
-      "/assets/projects/issue-tracker.webp",
-      "/assets/projects/issue-tracker.webp",
-      "/assets/projects/issue-tracker.webp",
-    ],
+    images: ["/assets/projects/issue-tracker.webp"],
     description:
       "Fullstack CRUD – Optimistic UI – Next.js App Router + Drizzle ORM",
+    href: "/",
   },
   {
     title: "E-commerce",
-    image: [
-      "/assets/projects/ecommerce.webp",
-      "/assets/projects/ecommerce.webp",
-      "/assets/projects/ecommerce.webp",
-    ],
+    images: ["/assets/projects/ecommerce.webp"],
     description:
       "Product listings – Search & filter UI – React + TypeScript + Motion",
+    href: "/",
   },
 ];
