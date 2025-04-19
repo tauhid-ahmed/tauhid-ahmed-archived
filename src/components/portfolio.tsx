@@ -33,7 +33,7 @@ function Card({
 }) {
   return (
     <>
-      <div className="relative p-14 space-y-6 md:space-y-8">
+      <div className="relative p-10 space-y-6 md:space-y-8">
         <ProjectThumbnail images={images} alt={title} />
         <div className="flex gap-4 flex-col justify-between relative">
           <div className="space-y-6">
@@ -71,7 +71,7 @@ function Card({
 
 function SectionHeader() {
   return (
-    <h2 className="text-[40px] flex justify-center items-center lg:text-6xl xl:text-[80px] leading-tight font-semibold">
+    <h2 className="text-4xl md:text-5xl lg:text-7xl flex justify-center items-center leading-tight font-semibold">
       <div className="relative inline-flex md:justify-center md:items-center">
         My&nbsp;
         <span className="relative inline-block">
