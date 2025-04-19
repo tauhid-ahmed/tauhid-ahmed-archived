@@ -2,9 +2,10 @@ import Image from "next/image";
 import { Container, Section } from "./layout";
 import { Button } from "./button";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { ProjectThumbnail } from "./project-thumbnail";
+import { projects } from "@/data";
 
-export default function Portfolio() {
+export function Portfolio() {
   return (
     <Section padding="lg" id="portfolio">
       <Container>
@@ -33,51 +34,27 @@ function Card({
   return (
     <>
       <div className="relative p-14 space-y-6 md:space-y-8">
-        <div className="space-y-2 aspect-video md:max-h-84 relative overflow-hidden">
-          {[...images, images[0]].map((image, index) => (
-            <motion.div
-              className="size-full absolute"
-              key={index}
-              style={{
-                top: `${index * 100}%`,
-              }}
-              animate={{
-                y: `${images.length * -100}%`,
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            >
-              <Image
-                height={300}
-                width={300}
-                src={image}
-                alt={"title"}
-                className="size-full object-cover"
-              />
-            </motion.div>
-          ))}
-        </div>
-        <div className="flex gap-4 justify-between">
-          <div className="space-y-4">
-            <h3 className="text-xl md:text-4xl font-semibold">{title}</h3>
+        <ProjectThumbnail images={images} alt={title} />
+        <div className="flex gap-4 flex-col justify-between relative">
+          <div className="space-y-6">
+            <h3 className="flex gap-2 items-center justify-between text-xl md:text-4xl font-semibold">
+              {title}
+              <Button
+                asChild
+                className="bg-black size-10 shrink-0 flex justify-center items-center shadow-[4px_4px_0px_rgba(0,0,0,0.4)]"
+              >
+                <Link href="/">
+                  <Image
+                    src="/assets/icons/arrow.svg"
+                    width={24}
+                    height={24}
+                    alt="arrow-right"
+                  />
+                </Link>
+              </Button>
+            </h3>
             <p className="md:text-xl lg:text-2xl font-medium">{description}</p>
           </div>
-          <Button
-            asChild
-            className="bg-black size-10 shrink-0 flex justify-center items-center shadow-[4px_4px_0px_rgba(0,0,0,0.4)]"
-          >
-            <Link href="/">
-              <Image
-                src="/assets/icons/arrow.svg"
-                width={24}
-                height={24}
-                alt="arrow-right"
-              />
-            </Link>
-          </Button>
         </div>
 
         <Image
@@ -117,37 +94,3 @@ function SectionHeader() {
     </h2>
   );
 }
-
-const projects = [
-  {
-    title: "Centurion",
-    images: [
-      "/assets/projects/centurion/centurion-1.webp",
-      "/assets/projects/centurion/centurion-2.webp",
-      "/assets/projects/centurion/centurion-3.webp",
-    ],
-    description:
-      "Product listings – Search & filter UI – React + TypeScript + Motion",
-    href: "/",
-  },
-  {
-    title: "Static portfolio",
-    images: ["/assets/projects/portfolio.webp"],
-    description: "Responsive UI – Animations – Static Next.js build + Motion",
-    href: "/",
-  },
-  {
-    title: "Issue tracker",
-    images: ["/assets/projects/issue-tracker.webp"],
-    description:
-      "Fullstack CRUD – Optimistic UI – Next.js App Router + Drizzle ORM",
-    href: "/",
-  },
-  {
-    title: "E-commerce",
-    images: ["/assets/projects/ecommerce.webp"],
-    description:
-      "Product listings – Search & filter UI – React + TypeScript + Motion",
-    href: "/",
-  },
-];

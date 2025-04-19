@@ -12,7 +12,11 @@ export default function AboutMe() {
     offset: ["start start", "end end"],
   });
   return (
-    <section ref={containerRef} className="after:h-[200vh] after:block py-20">
+    <section
+      id="about-me"
+      ref={containerRef}
+      className="after:h-[200vh] after:block py-20"
+    >
       <div className="min-h-screen flex items-center justify-center sticky top-0">
         <Container size="sm">
           <div className="relative text-xl pointer-events-none md:text-3xl leading-normal font-medium">

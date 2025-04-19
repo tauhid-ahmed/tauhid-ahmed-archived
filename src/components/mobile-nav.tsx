@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { navLinks } from "./header";
-import Link from "next/link";
+import { sections } from "./header";
 import { AnimatePresence, motion } from "motion/react";
 import { Button } from "./button";
 import { cn } from "@/lib/cn";
+import SectionLink from "./section-link";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -24,14 +24,9 @@ export function MobileNav() {
             exit={{ height: 0, opacity: 0 }}
             className="flex flex-col md:hidden absolute inset-x-0 top-full translate-y-2 bg-white border-2 shadow-[8px_8px_0px_rgba(0,0,0,0.4)] overflow-hidden"
           >
-            {navLinks.map((link) => (
-              <li
-                className="py-3.5 md:py-5 relative after:inset-x-0 after:h-4 after:bg-yellow-400 after:scale-y-0 hover:after:scale-y-100 active:after:scale-y-100 focus:after:scale-y-100 after:absolute after:-z-10 after:bottom-4 after:transition-transform after:origin-bottom"
-                key={link.name}
-              >
-                <Link className="text-2xl font-semibold px-4" href={link.href}>
-                  {link.name}
-                </Link>
+            {sections.map((item) => (
+              <li className="py-3.5 md:py-5 relative" key={item.name}>
+                <SectionLink name={item.name} targetId={item.section} />
               </li>
             ))}
           </motion.ul>

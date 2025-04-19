@@ -4,11 +4,12 @@ import Link from "next/link";
 import { ImageDecoration } from "./image-decoration";
 import { MobileNav } from "./mobile-nav";
 import HeaderAnimation from "./header-animation";
+import SectionLink from "./section-link";
 
-export const navLinks = [
-  { name: "About //", href: "#about" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Hire Me", href: "#hire-me" },
+export const sections = [
+  { name: "About //", section: "about-me" },
+  { name: "Portfolio", section: "portfolio" },
+  { name: "Hire Me", section: "hire-me" },
 ];
 
 export function Header() {
@@ -58,14 +59,9 @@ function Logo() {
 function DesktopNav() {
   return (
     <ul className="md:flex gap-4 hidden">
-      {navLinks.map((link) => (
-        <li className="py-3.5 md:py-5 border-l-4" key={link.name}>
-          <Link
-            className="text-xl z-10 md:text-2xl font-medium px-4 relative after:inset-x-0 after:h-4 after:bg-yellow-400 after:scale-y-0 hover:after:scale-y-100 active:after:scale-y-100 focus:after:scale-y-100 after:absolute after:-z-10 after:bottom-0 after:transition-transform after:origin-bottom"
-            href={link.href}
-          >
-            {link.name}
-          </Link>
+      {sections.map((item) => (
+        <li className="py-3.5 md:py-5 border-l-4" key={item.name}>
+          <SectionLink name={item.name} targetId={item.section} />
         </li>
       ))}
     </ul>
