@@ -26,10 +26,12 @@ function Card({
   title,
   images,
   description,
+  href,
 }: {
   title: string;
   images: string[];
   description: string;
+  href: string;
 }) {
   return (
     <>
@@ -43,7 +45,7 @@ function Card({
                 asChild
                 className="bg-black size-10 shrink-0 flex justify-center items-center shadow-[4px_4px_0px_rgba(0,0,0,0.4)]"
               >
-                <Link href="/">
+                <Link href={href} target="_blank">
                   <Image
                     src="/assets/icons/arrow.svg"
                     width={24}

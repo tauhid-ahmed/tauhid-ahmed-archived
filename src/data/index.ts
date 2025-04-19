@@ -10,14 +10,14 @@ export const projects = [
     ],
     description:
       "Enterprise platform for a multi-sector brand – Built with Next.js, Tailwind, next-intl & Motion",
-    href: "/",
+    href: "https://groupcenturions.com/",
   },
   {
     title: "Static Portfolio",
     images: ["/assets/projects/portfolio.webp"],
     description:
       "Developer portfolio – Clean UI & motion – Static Next.js + Tailwind",
-    href: "/",
+    href: "https://tauhidahmed.vercel.app/",
   },
   {
     title: "Issue tracker",
