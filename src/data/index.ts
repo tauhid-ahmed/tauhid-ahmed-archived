@@ -31,6 +31,6 @@ export const projects = [
     images: ["/assets/projects/ecommerce.webp"],
     description:
       "Product listings & filters – Dynamic UI – React + TypeScript + Motion",
-    href: "/",
+    href: "https://shop-ipsum.vercel.app",
   },
 ];
