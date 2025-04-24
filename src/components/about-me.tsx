@@ -4,12 +4,13 @@ import { useRef } from "react";
 import { Container } from "./layout";
 import { about_me } from "@/data";
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
+import Image from "next/image";
 
 export default function AboutMe() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"],
+    offset: ["start 0.1", "0.9 end"],
   });
   return (
     <section
@@ -19,7 +20,16 @@ export default function AboutMe() {
     >
       <div className="min-h-screen flex items-center justify-center sticky top-0">
         <Container size="sm">
-          <div className="relative text-xl pointer-events-none md:text-3xl leading-normal font-medium">
+          <div className="size-44 overflow-hidden border-6 shadow-[12px_12px_0px_rgba(0,0,0,0.4)] grayscale">
+            <Image
+              src="/assets/images/me2.webp"
+              alt="tauhid ahmed"
+              width={300}
+              height={300}
+              className="size-full object-cover origin-top-right rounded-full scale-100 border-4 border-black"
+            />
+          </div>
+          <div className="relative text-xl pointer-events-none md:text-3xl leading-normal font-medium mt-4">
             <TextAnimation text={about_me} scrollYProgress={scrollYProgress} />
           </div>
         </Container>
